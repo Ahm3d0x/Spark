@@ -93,14 +93,12 @@ import subprocess
 import json
 import random
 
-app = Flask(__name__)
 token = 'eAjHyObQrknThPllI8s-BhctlEAANJT6I4FfvAfUqhaB7nsQEvD-MMFCoUxS4-wbuxdWyA.'
 bard = Bard(token=token)
 
 # Specify the path to your JSON file
 json_file_path = 'data.json'
 
-@app.route('/run-python-script', methods=['POST'])
 def run_python_script():
     data = request.get_json()
     question = data.get('ask')
@@ -148,6 +146,4 @@ def run_python_script():
 
     return jsonify(response_data)
 
-if __name__ == '__main__':
-    app.run(port=5000,debug=True)
 
