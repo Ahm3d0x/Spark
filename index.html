@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <style>
+        .header{
+            position: fixed;
+            right: 1%;
+            width: 98%;
+            height: 50px;
+            top: 3px;
+            background-color: #000000;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            position: fixed;
+            top: -15px;
+            width: 100%;
+            left: 3%;
+            font-size: 30px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            color: hsl(0, 0%, 100%);
+        }
+        .creator-name{
+
+            position: fixed;
+            top: 37px;
+            width: 100%;
+            left: 3%;
+            font-size: 20px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 15px;
+            color: #00ffd9;
+        }
+        .bot-stat{
+            background-color: #484848;
+            width: 125px;
+            height: 48px;
+            position: fixed;
+            top: 5px;
+            right: 2%;
+            border: 2px solid #000000;
+            border-radius: 8px;
+
+        }
+        .progres{
+            position: relative;
+            display: flex;
+            width: 100%;
+            top: -88px;
+            right: 6%;
+            padding: 10px;
+            font-size: 40px;
+            font-weight: 900;
+    
+            justify-content: center;
+        }
+        .stat{
+            position: relative;
+            width: 100%;
+            display: flex;
+            top: -17px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ffd9;
+            justify-content: center;
+        }
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #484848;
+        }
+
+        .ask-box{        
+            position: fixed;
+            right: 1%;
+            width: 98%;
+            height: 55px;
+            bottom: 3px;
+            background-color: #d7d7d7;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .write-box{
+            position: fixed;
+            left: 3%;
+            bottom: 5px;
+            width: 75%;
+            height: 40px;
+            padding: 8px;
+            background-color: transparent;
+            font-size: 20px;
+            outline: none;
+            border: none;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: #000000;
+
+        }    
+        
+        #send-button {
+            position: fixed;
+            right: 2%;
+            bottom: 10px;
+            width: 15%;
+            height: 45px;
+            background-color: #3edea9;
+            border-radius: 8px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            border: none;
+
+        }
+
+          
+        .me {
+        direction: ltr;
+        max-width: 80%;
+        min-height: 30px;
+        height: auto;
+        margin-left: 3%;
+        margin-top: 15px;
+        padding: 5px;
+        padding-left: 10px;
+        border-radius: 5px;
+        border-left: 5px #00FFBE solid;
+        border-bottom: 3px #00FFBE solid;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .spark {
+        direction: ltr;
+        max-width: 80%;
+        width: auto;
+        margin-left: 7%;
+        margin-top: 15px;
+        min-height: 30px;
+        height: auto;
+        padding: 5px;
+        border-radius: 5px;
+        border-left: 5px #FF0000 solid;
+        border-bottom: 3px #FF0000 solid;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        }
+        
+        #messages {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+<title>SPARK AI</title>
+</head>
+<body>
+    <div class="header">
+        <h1>SPARK AI</h1>
+        <span class="creator-name">by:Ahmed-Attia</span>
+
+    </div>
+    <div class="bot-stat">
+    <p class="stat"></p>
+    <p class="progres"> <span class="p5">.</span><span class="p4">.</span> <span class="p3">.</span><span class="p2">.</span><span class="p1">.</span></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="chat-container">
+
+        <div class="box-masg">
+
+            <!-- <div class="me"></div>
+            <div class="spark"></div> -->
+        </div>
+    <br>
+    <br>    
+    <br>
+    <br>
+
+
+        <div class="ask-box">
+        <input class="write-box" type="text" id="message-input" placeholder="In your servise sir?">
+        <button id="send-button">Send</button>
+    </div>
+    </div>
+    <!-- <script src="node_app.js"></script> -->
+    
+    <script src="renderer.js"></script>
+
+
+</body>
+</html>
